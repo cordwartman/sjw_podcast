@@ -8,12 +8,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div id="site-title">
+    <%= link_to(( image_tag "sjw_logo.jpg"), root_path, class: "site-logo") %>
+  </div>
   <div class="container">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <ul class="nav navbar-nav">
-          <li class="active" style="font-size: 24px;"><%= link_to "SJW Podcast", root_path %></li>
+          <li class="active" style="font-size: 24px;"></li>
           <li><%= link_to "Articles", articles_path %></li>
           <li>"About"</li>
         </ul>
