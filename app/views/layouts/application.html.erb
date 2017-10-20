@@ -17,14 +17,14 @@
         <ul class="nav navbar-nav">
           <li class="active" style="font-size: 24px;"></li>
           <li><%= link_to "Articles", articles_path %></li>
-          <li>"About"</li>
+          <li><%= link_to "About", welcome_about_path %></li>
         </ul>
         <div class="nav navbar-nav navbar-right">
           "Placeholder"
         </div>
       </div>
     </nav>
+    <%= yield %>
   </div>
-
-  </body>
-  </html>
+</body>
+</html>
