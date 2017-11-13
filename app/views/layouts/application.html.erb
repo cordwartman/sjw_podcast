@@ -8,20 +8,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <!-- Javascript SDK for facebook plugin -->
+<div class="container-fluid">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+</div>
   <div id="site-title">
     <%= link_to(( image_tag "sjw_logo.jpg"), root_path, class: "site-logo") %>
   </div>
   <div class="container-fluid">
-    <nav class="navbar navbar-light bg-primary;">
+    <nav class="navbar navbar-inverse bg-primary;">
       <div class="container-fluid">
         <ul class="nav navbar-nav">
-          <li class="active" style="font-size: 24px;"></li>
+          <li class="active" style="font-size: 30px;"></li>
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Social Media", welcome_social_path %></li>
           <li><%= link_to "About", welcome_about_path %></li>
-        </ul>
-        <div class="nav navbar-nav navbar-right">
           <li><%= link_to "Contact Us", new_message_path %></li>
+        </ul>
         </div>
       </div>
     </nav>
