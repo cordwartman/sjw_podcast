@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Social Justice Warrior Podcast</title>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Social Justice Warrior Podcast</title>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -22,19 +27,17 @@
   <div id="site-title">
     <%= link_to(( image_tag "sjw_logo.jpg"), root_path, class: "site-logo") %>
   </div>
-  <div class="container-fluid">
-    <nav class="navbar navbar-inverse bg-primary;">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li class="active" style="font-size: 30px;"></li>
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Social Media", welcome_social_path %></li>
-          <li><%= link_to "About", welcome_about_path %></li>
-          <li><%= link_to "Contact Us", new_message_path %></li>
-        </ul>
-        </div>
-      </div>
-    </nav>
+  <nav class="navbar navbar-inverse bg-primary;">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="active"></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Social Media", welcome_social_path %></li>
+        <li><%= link_to "About", welcome_about_path %></li>
+        <li><%= link_to "Contact Us", new_message_path %></li>
+      </ul>
+    </div>
+  </nav>
     <%= yield %>
   </div>
 </body>
